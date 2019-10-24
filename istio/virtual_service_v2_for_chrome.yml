@@ -19,14 +19,14 @@ spec:
     - headers:
         user-agent:
           regex: ".*Firefox.*"
-    route:
+  - route:
     - destination:
         host: front-end.production.svc.cluster.local
         subset: v1
     - headers:
         user-agent:
           regex: ".*Explorer.*"
-    route:
+  - route:
     - destination:
         host: front-end.production.svc.cluster.local
         subset: v1
