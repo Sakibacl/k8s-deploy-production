@@ -22,11 +22,11 @@ spec:
   - route:
     - destination:
         host: front-end.production.svc.cluster.local
-        subset: v1
+        subset: v2
     - headers:
         user-agent:
           regex: ".*Explorer.*"
   - route:
     - destination:
         host: front-end.production.svc.cluster.local
-        subset: v1
+        subset: v3
