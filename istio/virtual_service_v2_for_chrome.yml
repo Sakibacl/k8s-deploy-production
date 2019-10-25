@@ -12,21 +12,23 @@ spec:
     - headers:
         user-agent:
           regex: ".*Chrome.*"
-  - route:
+    route:
     - destination:
         host: front-end.production.svc.cluster.local
         subset: v1
+  - match:
     - headers:
         user-agent:
           regex: ".*Firefox.*"
-  - route:
+    route:
     - destination:
         host: front-end.production.svc.cluster.local
-        subset: v2
+        subset: v2  
+  - match:
     - headers:
         user-agent:
           regex: ".*Explorer.*"
-  - route:
+    route:
     - destination:
         host: front-end.production.svc.cluster.local
         subset: v3
